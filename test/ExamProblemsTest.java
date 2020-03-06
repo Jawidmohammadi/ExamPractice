@@ -26,11 +26,12 @@ class ExamProblemsTest {
 
   }
 
-  @ParameterizedTest
-  @CsvFileSource(resources = "ssn.csv")
-  void ssnstring(String expected, char[] ssn ) {
-//    char[] ssnparam = {'1','2','3','4','5','6','7','8','9'};
-//    String expected = "123-45-6789";
+  @Test
+//  @ParameterizedTest
+//  @CsvFileSource(resources = "ssn.csv")
+  void ssnstring(char[] ssn ) {
+    char[] ssnparam = {'1','2','3','4','5','6','7','8','9'};
+    String expected = "123-45-6789";
     assertEquals(expected, ExamProblems.ssnstring(ssn));
   }
 
